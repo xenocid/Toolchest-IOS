@@ -11,5 +11,6 @@
 @interface NSMutableArray (TCExtensions)
 
 - (void)        moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+- (void)        shuffle;
 
 @end

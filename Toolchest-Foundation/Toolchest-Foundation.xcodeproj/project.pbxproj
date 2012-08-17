@@ -18,6 +18,8 @@
 		15FF8C6815DDAAF100C9BEE8 /* TCArrayExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6715DDAAF100C9BEE8 /* TCArrayExtensionsTests.m */; };
 		15FF8C6E15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */; };
 		15FF8C6F15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */; };
+		15FF8C7315DEC4D700C9BEE8 /* TCMathTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C7215DEC4D700C9BEE8 /* TCMathTools.m */; };
+		15FF8C7415DEC4D700C9BEE8 /* TCMathTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C7215DEC4D700C9BEE8 /* TCMathTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		15FF8C6715DDAAF100C9BEE8 /* TCArrayExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCArrayExtensionsTests.m; sourceTree = "<group>"; };
 		15FF8C6C15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+TCExtensions.h"; sourceTree = "<group>"; };
 		15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TCExtensions.m"; sourceTree = "<group>"; };
+		15FF8C7115DEC4D700C9BEE8 /* TCMathTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMathTools.h; sourceTree = "<group>"; };
+		15FF8C7215DEC4D700C9BEE8 /* TCMathTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMathTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 			children = (
 				15FF8C6015DDA87B00C9BEE8 /* Categories */,
 				15FF8C3B15DDA85C00C9BEE8 /* Supporting Files */,
+				15FF8C7115DEC4D700C9BEE8 /* TCMathTools.h */,
+				15FF8C7215DEC4D700C9BEE8 /* TCMathTools.m */,
 			);
 			path = "Toolchest-Foundation";
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 			files = (
 				15FF8C6415DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */,
 				15FF8C6E15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */,
+				15FF8C7315DEC4D700C9BEE8 /* TCMathTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 				15FF8C6515DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */,
 				15FF8C6815DDAAF100C9BEE8 /* TCArrayExtensionsTests.m in Sources */,
 				15FF8C6F15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */,
+				15FF8C7415DEC4D700C9BEE8 /* TCMathTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
