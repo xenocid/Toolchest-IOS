@@ -12,6 +12,22 @@
 
 @implementation TCArrayExtensionsTests
 
+-(void) testArrayOfSortedString
+{
+    NSArray* array = [[NSArray arrayWithObjects: @"charlie", @"zulu", @"alpha", [NSNumber numberWithInteger:2], @"bravo", nil] arrayOfSortedStrings];
+    NSArray* controlArray = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"zulu", nil];
+    
+    [controlArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        STAssertTrue( [((NSString*)obj) isEqualToString: (NSString*)[array objectAtIndex:idx]], @"Strings do not match");
+    }];
+}
+
+-(void) testStringValue
+{
+    NSString* stringValue = [[NSArray arrayWithObjects: @"charlie", @"zulu", @"alpha", nil] stringValue];
+    STAssertTrue([stringValue isEqualToString:@"charlie zulu alpha"], @"Strings do not match");
+}
+
 -(void) testSelect
 {
     NSArray* digits1 = [[NSArray arrayWithNumberSequence:100] select:^BOOL(id value) {

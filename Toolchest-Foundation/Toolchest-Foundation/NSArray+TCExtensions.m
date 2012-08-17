@@ -45,7 +45,7 @@
     return result;
 }
 
--(void)     each:(void (^)(id))block
+-(void) each:(void (^)(id))block
 {
     for (id obj in self) {
         block(obj);
@@ -79,6 +79,18 @@
         result = block(result, obj);
     }
     return result;
+}
+
+- (NSArray*) arrayOfSortedStrings
+{
+	return [[NSMutableArray arrayWithArray: [self select: ^BOOL(id value) {
+        return [value isKindOfClass: [NSString class]];
+    }]] sortedArrayUsingSelector: @selector(caseInsensitiveCompare:)];
+}
+
+- (NSString*) stringValue
+{
+	return [self componentsJoinedByString:@" "];
 }
 
 
