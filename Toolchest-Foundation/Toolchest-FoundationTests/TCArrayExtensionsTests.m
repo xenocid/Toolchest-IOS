@@ -27,6 +27,22 @@
     }
 }
 
+-(void) testEach
+{
+    NSMutableArray* digits1 = [NSMutableArray array];
+    [[NSArray arrayWithNumberSequence:10] each:^(id value) {
+        [digits1 addObject: [NSNumber numberWithInteger: [value integerValue] * 3]];
+    }];
+    NSMutableArray* controlDigits1 = [NSMutableArray array];
+    for(int i = 0; i < 10; i++) {
+        [controlDigits1 addObject: [NSNumber numberWithInteger: i * 3]];
+    }
+    
+    for(int i = 0; i < 10; i++) {
+        STAssertEquals([[digits1 objectAtIndex:i] integerValue], [[controlDigits1 objectAtIndex:i] integerValue], @"Arrays do not match");
+    }
+}
+
 -(void) testArrayWithNumberSequence
 {
     NSArray* digits1 = [NSArray arrayWithNumberSequence:5];
