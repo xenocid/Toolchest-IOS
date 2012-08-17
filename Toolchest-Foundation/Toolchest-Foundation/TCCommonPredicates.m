@@ -23,3 +23,7 @@ reduce_block_predicate integerTotal = ^ id(id accumulator, id obj) {
 reduce_block_predicate floatTotal = ^ id(id accumulator, id obj) {
     return [NSNumber numberWithFloat: [accumulator floatValue] + [obj floatValue]];
 };
+
+reduce_block_predicate integerFactorial = ^ id(id accumulator, id obj) {
+    return [NSNumber numberWithInteger: [accumulator integerValue] * [obj integerValue]];
+};

@@ -13,7 +13,15 @@ typedef BOOL (^select_block_predicate)(id obj);
 typedef id   (^map_block_predicate)(id obj);
 typedef id   (^reduce_block_predicate)(id accumulator, id obj);
 
+//  Each predicates
+
+//  Select predicates
 select_block_predicate isEven;
 select_block_predicate isOdd;
+
+//  Map predicates
+
+//  Reduce predicates
 reduce_block_predicate integerTotal;
 reduce_block_predicate floatTotal;
+reduce_block_predicate integerFactorial;
