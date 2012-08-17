@@ -10,15 +10,20 @@
 
 @interface NSArray (TCExtensions)
 
--(void)         each:(void (^)(id))block;
--(NSArray*)     select:(BOOL (^)(id))block;
--(NSArray*)     map:(id (^)(id))block;
--(id)           reduce:(id) initial withBlock:(id (^)(id, id))block;
-
-- (void)        moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+-(void)         each:(void (^)(id obj))block;
+-(NSArray*)     select:(BOOL (^)(id obj))block;
+-(NSArray*)     map:(id (^)(id obj))block;
+-(id)           reduce:(id) initial withBlock:(id (^)(id accumulator, id obj))block;
 
 -(NSArray*)     arrayOfSortedStrings;
 -(NSString*)    stringValue;
+
+-(NSArray*)     unique;
+-(NSArray*)     unionWithArray:(NSArray*) array;
+-(NSArray*)     intersectionWithArray:(NSArray*) array;
+-(NSArray*)     intersectionWithSet:(NSSet*) set;
+-(NSArray*)     complementWithArray:(NSArray*) array;
+-(NSArray*)     complementWithSet:(NSSet*) set;
 
 +(NSArray*)     arrayWithNumberSequence:(NSUInteger) count;
 +(NSArray*)     arrayWithNumberSequence:(NSInteger) count startingAt:(NSInteger) startFrom;

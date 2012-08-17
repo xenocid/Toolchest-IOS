@@ -45,14 +45,14 @@
     return result;
 }
 
--(void) each:(void (^)(id))block
+-(void) each:(void (^)(id obj))block
 {
     for (id obj in self) {
         block(obj);
     }
 }
 
--(NSArray*) select:(BOOL (^)(id))block
+-(NSArray*) select:(BOOL (^)(id obj))block
 {
     NSMutableArray* results = [NSMutableArray array];
     for (id obj in self) {
@@ -63,7 +63,7 @@
     return results;
 }
 
--(NSArray*) map:(id (^)(id))block
+-(NSArray*) map:(id (^)(id obj))block
 {
     NSMutableArray* results = [NSMutableArray array];
     for (id obj in self) {
@@ -72,13 +72,86 @@
     return results;
 }
 
--(id) reduce:(id) initial withBlock:(id (^)(id, id))block
+-(id) reduce:(id) initial withBlock:(id (^)(id accumulator, id obj))block
 {
     id result = initial;
     for (id obj in self) {
         result = block(result, obj);
     }
     return result;
+}
+
+-(NSArray*) unique
+{
+    NSMutableArray* copy = [NSMutableArray arrayWithArray:self];
+    [self each:^(id obj) {
+        [copy removeObjectIdenticalTo:obj];
+        [copy addObject:obj];
+    }];
+    
+    return copy;
+}
+
+-(NSArray*) unionWithArray:(NSArray*) array
+{
+	if (!array) {
+        return self;
+    } else {
+        return [[self arrayByAddingObjectsFromArray:array] unique];
+    }
+}
+
+-(NSArray*) intersectionWithArray:(NSArray*) array
+{
+	NSMutableArray* copy = [self mutableCopy];
+	
+    [self each:^(id obj) {
+        if (![array containsObject:obj]) {
+			[copy removeObjectIdenticalTo:obj];
+        }
+    }];
+		
+	return [copy unique];
+}
+
+-(NSArray*) intersectionWithSet:(NSSet*) set
+{
+	NSMutableArray* copy = [self mutableCopy];
+    
+    [self each:^(id obj) {
+        if (![set containsObject:obj]) {
+			[copy removeObjectIdenticalTo:obj];
+        }
+    }];
+		
+	return [copy unique];
+}
+
+// http://en.wikipedia.org/wiki/Complement_(set_theory)
+-(NSArray*) complementWithArray:(NSArray*) array
+{
+	NSMutableArray* copy = [self mutableCopy];
+	
+    [self each:^(id obj) {
+        if ([array containsObject:obj]) {
+			[copy removeObjectIdenticalTo:obj];
+        }
+    }];
+    
+	return [copy unique];
+}
+
+-(NSArray*) complementWithSet:(NSSet*) set
+{
+	NSMutableArray* copy = [self mutableCopy];
+	
+    [self each:^(id obj) {
+        if ([set containsObject:obj]) {
+			[copy removeObjectIdenticalTo:obj];
+        }
+    }];
+	
+    return [copy unique];
 }
 
 - (NSArray*) arrayOfSortedStrings

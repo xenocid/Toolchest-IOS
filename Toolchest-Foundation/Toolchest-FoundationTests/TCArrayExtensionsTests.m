@@ -9,6 +9,7 @@
 #import "TCArrayExtensionsTests.h"
 
 #import "NSArray+TCExtensions.h"
+#import "NSMutableArray+TCExtensions.h"
 
 @implementation TCArrayExtensionsTests
 
@@ -90,7 +91,7 @@
 
 -(void) testMoveObjectAtIndex
 {
-    NSMutableArray* digits = [NSMutableArray arrayWithArray: [NSArray arrayWithNumberSequence:3]];
+    NSMutableArray* digits = [[NSArray arrayWithNumberSequence:3] mutableCopy];
     NSArray* controlDigits = [NSArray arrayWithObjects: [NSNumber numberWithInteger:0],
                                                         [NSNumber numberWithInteger:2],
                                                         [NSNumber numberWithInteger:1],nil];
@@ -99,6 +100,61 @@
     for(int i = 0; i < 3; i++) {
         STAssertEquals([[digits objectAtIndex:i] integerValue], [[controlDigits objectAtIndex:i] integerValue], @"Arrays do not match");
     }
+}
+
+-(void) testUnique
+{
+    NSArray* initial = [NSArray arrayWithObjects: @"alpha", @"alpha", @"bravo", @"bravo", @"bravo", @"charlie", nil];
+    NSArray* control = [NSArray arrayWithObjects: @"alpha", @"bravo", @"charlie", nil];
+    
+    NSArray* uniques = [initial unique];
+    
+    STAssertTrue([control isEqualToArray:uniques], @"testUnique: arrays do not match");
+}
+
+-(void) testUnion
+{
+    NSArray* array1 = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"delta", nil ];
+    NSArray* array2 = [NSArray arrayWithObjects:@"alpha", @"echo", @"foxtrot", nil ];
+    NSArray* control = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"delta", @"echo", @"foxtrot", nil ];
+    
+    NSArray* unionArray = [array1 unionWithArray: array2];
+    
+    unionArray = [unionArray sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+
+    [[control sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        STAssertTrue( [(NSString*)obj isEqualToString: [unionArray objectAtIndex:idx]], @"Strings are not equal");
+    }];
+}
+
+-(void) testIntersection
+{
+    NSArray* array1 = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"delta", nil ];
+    NSArray* array2 = [NSArray arrayWithObjects:@"alpha", @"echo", @"foxtrot", nil ];
+    NSArray* control = [NSArray arrayWithObjects:@"alpha", nil ];
+    
+    NSArray* intersectionArray = [array1 intersectionWithArray: array2];
+    
+    intersectionArray = [intersectionArray sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    
+    [[control sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        STAssertTrue( [(NSString*)obj isEqualToString: [intersectionArray objectAtIndex:idx]], @"Strings are not equal");
+    }];
+}
+
+-(void) testComplementation
+{
+    NSArray* array1 = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"delta", nil ];
+    NSArray* array2 = [NSArray arrayWithObjects:@"alpha", @"echo", @"foxtrot", nil ];
+    NSArray* control = [NSArray arrayWithObjects:@"bravo", @"charlie", @"delta", nil ];
+    
+    NSArray* complementationArray = [array1 complementWithArray: array2];
+    
+    complementationArray = [complementationArray sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    
+    [[control sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        STAssertTrue( [(NSString*)obj isEqualToString: [complementationArray objectAtIndex:idx]], @"Strings are not equal");
+    }];
 }
 
 -(void) testArrayWithNumberSequence
