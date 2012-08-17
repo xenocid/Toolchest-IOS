@@ -43,6 +43,35 @@
     }
 }
 
+-(void) testMap
+{
+    NSArray* digits1 = [[NSArray arrayWithNumberSequence:10] map:^id(id value) {
+        return [NSNumber numberWithInteger: [value integerValue] * 2];
+    }];
+    NSMutableArray* controlDigits1 = [NSMutableArray array];
+    for(int i = 0; i < 10; i++) {
+        [controlDigits1 addObject: [NSNumber numberWithInteger: i * 2]];
+    }
+    
+    for(int i = 0; i < 10; i++) {
+        STAssertEquals([[digits1 objectAtIndex:i] integerValue], [[controlDigits1 objectAtIndex:i] integerValue], @"Arrays do not match");
+    }
+}
+
+-(void) testReduce
+{
+    NSNumber* result = [[NSArray arrayWithNumberSequence:10 startingAt: 1] reduce:[NSNumber numberWithInteger:2] withBlock:^id(id result, id value) {
+        return [NSNumber numberWithInteger: [result integerValue] * [value integerValue]];
+    }];
+    
+    NSNumber* controlResult = [NSNumber numberWithInteger:2];
+    for(int i = 1; i <= 10; i++) {
+        controlResult = [NSNumber numberWithInteger: [controlResult integerValue] * i];
+    }
+    
+    STAssertEquals([result integerValue], [controlResult integerValue], @"Arrays do not match");
+}
+
 -(void) testArrayWithNumberSequence
 {
     NSArray* digits1 = [NSArray arrayWithNumberSequence:5];

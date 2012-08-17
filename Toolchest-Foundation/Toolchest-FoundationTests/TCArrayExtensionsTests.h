@@ -10,6 +10,4 @@
 
 @interface TCArrayExtensionsTests : SenTestCase
 
--(void) testSelect;
-
 @end
