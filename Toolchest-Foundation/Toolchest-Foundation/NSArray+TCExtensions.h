@@ -15,6 +15,8 @@
 -(NSArray*)     map:(id (^)(id))block;
 -(id)           reduce:(id) initial withBlock:(id (^)(id, id))block;
 
+- (void)        moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+
 -(NSArray*)     arrayOfSortedStrings;
 -(NSString*)    stringValue;
 

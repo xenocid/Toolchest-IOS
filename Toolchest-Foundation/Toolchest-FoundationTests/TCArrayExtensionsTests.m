@@ -88,6 +88,19 @@
     STAssertEquals([result integerValue], [controlResult integerValue], @"Arrays do not match");
 }
 
+-(void) testMoveObjectAtIndex
+{
+    NSMutableArray* digits = [NSMutableArray arrayWithArray: [NSArray arrayWithNumberSequence:3]];
+    NSArray* controlDigits = [NSArray arrayWithObjects: [NSNumber numberWithInteger:0],
+                                                        [NSNumber numberWithInteger:2],
+                                                        [NSNumber numberWithInteger:1],nil];
+    [digits moveObjectAtIndex:2 toIndex:1];
+    
+    for(int i = 0; i < 3; i++) {
+        STAssertEquals([[digits objectAtIndex:i] integerValue], [[controlDigits objectAtIndex:i] integerValue], @"Arrays do not match");
+    }
+}
+
 -(void) testArrayWithNumberSequence
 {
     NSArray* digits1 = [NSArray arrayWithNumberSequence:5];

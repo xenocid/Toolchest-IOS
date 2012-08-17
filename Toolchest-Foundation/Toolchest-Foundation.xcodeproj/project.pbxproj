@@ -16,6 +16,8 @@
 		15FF8C6415DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */; };
 		15FF8C6515DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */; };
 		15FF8C6815DDAAF100C9BEE8 /* TCArrayExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6715DDAAF100C9BEE8 /* TCArrayExtensionsTests.m */; };
+		15FF8C6E15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */; };
+		15FF8C6F15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TCExtensions.m"; sourceTree = "<group>"; };
 		15FF8C6615DDAAF100C9BEE8 /* TCArrayExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCArrayExtensionsTests.h; sourceTree = "<group>"; };
 		15FF8C6715DDAAF100C9BEE8 /* TCArrayExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCArrayExtensionsTests.m; sourceTree = "<group>"; };
+		15FF8C6C15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+TCExtensions.h"; sourceTree = "<group>"; };
+		15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TCExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 			children = (
 				15FF8C6215DDA8AC00C9BEE8 /* NSArray+TCExtensions.h */,
 				15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */,
+				15FF8C6C15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.h */,
+				15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15FF8C6415DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */,
+				15FF8C6E15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +267,7 @@
 			files = (
 				15FF8C6515DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */,
 				15FF8C6815DDAAF100C9BEE8 /* TCArrayExtensionsTests.m in Sources */,
+				15FF8C6F15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
