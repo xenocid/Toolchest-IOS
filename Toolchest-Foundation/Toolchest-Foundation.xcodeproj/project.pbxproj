@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15FF8C3915DDA85C00C9BEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF8C3815DDA85C00C9BEE8 /* Foundation.framework */; };
+		15FF8C3E15DDA85C00C9BEE8 /* Toolchest_Foundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 15FF8C3D15DDA85C00C9BEE8 /* Toolchest_Foundation.h */; };
+		15FF8C4015DDA85C00C9BEE8 /* Toolchest_Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C3F15DDA85C00C9BEE8 /* Toolchest_Foundation.m */; };
+		15FF8C4815DDA85C00C9BEE8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF8C4715DDA85C00C9BEE8 /* SenTestingKit.framework */; };
+		15FF8C4A15DDA85C00C9BEE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF8C4915DDA85C00C9BEE8 /* UIKit.framework */; };
+		15FF8C4B15DDA85C00C9BEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF8C3815DDA85C00C9BEE8 /* Foundation.framework */; };
+		15FF8C4E15DDA85C00C9BEE8 /* libToolchest-Foundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF8C3515DDA85C00C9BEE8 /* libToolchest-Foundation.a */; };
+		15FF8C5415DDA85C00C9BEE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15FF8C5215DDA85C00C9BEE8 /* InfoPlist.strings */; };
+		15FF8C5715DDA85C00C9BEE8 /* Toolchest_FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C5615DDA85C00C9BEE8 /* Toolchest_FoundationTests.m */; };
+		15FF8C6415DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */; };
+		15FF8C6515DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */; };
+		15FF8C6815DDAAF100C9BEE8 /* TCArrayExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6715DDAAF100C9BEE8 /* TCArrayExtensionsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15FF8C4C15DDA85C00C9BEE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15FF8C2C15DDA85C00C9BEE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15FF8C3415DDA85C00C9BEE8;
+			remoteInfo = "Toolchest-Foundation";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15FF8C3315DDA85C00C9BEE8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				15FF8C3E15DDA85C00C9BEE8 /* Toolchest_Foundation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		15FF8C3515DDA85C00C9BEE8 /* libToolchest-Foundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libToolchest-Foundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15FF8C3815DDA85C00C9BEE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15FF8C3C15DDA85C00C9BEE8 /* Toolchest-Foundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toolchest-Foundation-Prefix.pch"; sourceTree = "<group>"; };
+		15FF8C3D15DDA85C00C9BEE8 /* Toolchest_Foundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Toolchest_Foundation.h; sourceTree = "<group>"; };
+		15FF8C3F15DDA85C00C9BEE8 /* Toolchest_Foundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Toolchest_Foundation.m; sourceTree = "<group>"; };
+		15FF8C4615DDA85C00C9BEE8 /* Toolchest-FoundationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Toolchest-FoundationTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15FF8C4715DDA85C00C9BEE8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		15FF8C4915DDA85C00C9BEE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		15FF8C5115DDA85C00C9BEE8 /* Toolchest-FoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Toolchest-FoundationTests-Info.plist"; sourceTree = "<group>"; };
+		15FF8C5315DDA85C00C9BEE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15FF8C5515DDA85C00C9BEE8 /* Toolchest_FoundationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Toolchest_FoundationTests.h; sourceTree = "<group>"; };
+		15FF8C5615DDA85C00C9BEE8 /* Toolchest_FoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Toolchest_FoundationTests.m; sourceTree = "<group>"; };
+		15FF8C6215DDA8AC00C9BEE8 /* NSArray+TCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TCExtensions.h"; sourceTree = "<group>"; };
+		15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TCExtensions.m"; sourceTree = "<group>"; };
+		15FF8C6615DDAAF100C9BEE8 /* TCArrayExtensionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCArrayExtensionsTests.h; sourceTree = "<group>"; };
+		15FF8C6715DDAAF100C9BEE8 /* TCArrayExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCArrayExtensionsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15FF8C3215DDA85C00C9BEE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FF8C3915DDA85C00C9BEE8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15FF8C4215DDA85C00C9BEE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FF8C4815DDA85C00C9BEE8 /* SenTestingKit.framework in Frameworks */,
+				15FF8C4A15DDA85C00C9BEE8 /* UIKit.framework in Frameworks */,
+				15FF8C4B15DDA85C00C9BEE8 /* Foundation.framework in Frameworks */,
+				15FF8C4E15DDA85C00C9BEE8 /* libToolchest-Foundation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15FF8C2A15DDA85C00C9BEE8 = {
+			isa = PBXGroup;
+			children = (
+				15FF8C3A15DDA85C00C9BEE8 /* Toolchest-Foundation */,
+				15FF8C4F15DDA85C00C9BEE8 /* Toolchest-FoundationTests */,
+				15FF8C3715DDA85C00C9BEE8 /* Frameworks */,
+				15FF8C3615DDA85C00C9BEE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15FF8C3615DDA85C00C9BEE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15FF8C3515DDA85C00C9BEE8 /* libToolchest-Foundation.a */,
+				15FF8C4615DDA85C00C9BEE8 /* Toolchest-FoundationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15FF8C3715DDA85C00C9BEE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15FF8C3815DDA85C00C9BEE8 /* Foundation.framework */,
+				15FF8C4715DDA85C00C9BEE8 /* SenTestingKit.framework */,
+				15FF8C4915DDA85C00C9BEE8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15FF8C3A15DDA85C00C9BEE8 /* Toolchest-Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				15FF8C6015DDA87B00C9BEE8 /* Categories */,
+				15FF8C3D15DDA85C00C9BEE8 /* Toolchest_Foundation.h */,
+				15FF8C3F15DDA85C00C9BEE8 /* Toolchest_Foundation.m */,
+				15FF8C3B15DDA85C00C9BEE8 /* Supporting Files */,
+			);
+			path = "Toolchest-Foundation";
+			sourceTree = "<group>";
+		};
+		15FF8C3B15DDA85C00C9BEE8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15FF8C3C15DDA85C00C9BEE8 /* Toolchest-Foundation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15FF8C4F15DDA85C00C9BEE8 /* Toolchest-FoundationTests */ = {
+			isa = PBXGroup;
+			children = (
+				15FF8C5515DDA85C00C9BEE8 /* Toolchest_FoundationTests.h */,
+				15FF8C5615DDA85C00C9BEE8 /* Toolchest_FoundationTests.m */,
+				15FF8C5015DDA85C00C9BEE8 /* Supporting Files */,
+				15FF8C6615DDAAF100C9BEE8 /* TCArrayExtensionsTests.h */,
+				15FF8C6715DDAAF100C9BEE8 /* TCArrayExtensionsTests.m */,
+			);
+			path = "Toolchest-FoundationTests";
+			sourceTree = "<group>";
+		};
+		15FF8C5015DDA85C00C9BEE8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15FF8C5115DDA85C00C9BEE8 /* Toolchest-FoundationTests-Info.plist */,
+				15FF8C5215DDA85C00C9BEE8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15FF8C6015DDA87B00C9BEE8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				15FF8C6215DDA8AC00C9BEE8 /* NSArray+TCExtensions.h */,
+				15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15FF8C3415DDA85C00C9BEE8 /* Toolchest-Foundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15FF8C5A15DDA85C00C9BEE8 /* Build configuration list for PBXNativeTarget "Toolchest-Foundation" */;
+			buildPhases = (
+				15FF8C3115DDA85C00C9BEE8 /* Sources */,
+				15FF8C3215DDA85C00C9BEE8 /* Frameworks */,
+				15FF8C3315DDA85C00C9BEE8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toolchest-Foundation";
+			productName = "Toolchest-Foundation";
+			productReference = 15FF8C3515DDA85C00C9BEE8 /* libToolchest-Foundation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		15FF8C4515DDA85C00C9BEE8 /* Toolchest-FoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15FF8C5D15DDA85C00C9BEE8 /* Build configuration list for PBXNativeTarget "Toolchest-FoundationTests" */;
+			buildPhases = (
+				15FF8C4115DDA85C00C9BEE8 /* Sources */,
+				15FF8C4215DDA85C00C9BEE8 /* Frameworks */,
+				15FF8C4315DDA85C00C9BEE8 /* Resources */,
+				15FF8C4415DDA85C00C9BEE8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15FF8C4D15DDA85C00C9BEE8 /* PBXTargetDependency */,
+			);
+			name = "Toolchest-FoundationTests";
+			productName = "Toolchest-FoundationTests";
+			productReference = 15FF8C4615DDA85C00C9BEE8 /* Toolchest-FoundationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15FF8C2C15DDA85C00C9BEE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Alex Koloskov";
+			};
+			buildConfigurationList = 15FF8C2F15DDA85C00C9BEE8 /* Build configuration list for PBXProject "Toolchest-Foundation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 15FF8C2A15DDA85C00C9BEE8;
+			productRefGroup = 15FF8C3615DDA85C00C9BEE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15FF8C3415DDA85C00C9BEE8 /* Toolchest-Foundation */,
+				15FF8C4515DDA85C00C9BEE8 /* Toolchest-FoundationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15FF8C4315DDA85C00C9BEE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FF8C5415DDA85C00C9BEE8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15FF8C4415DDA85C00C9BEE8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15FF8C3115DDA85C00C9BEE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FF8C4015DDA85C00C9BEE8 /* Toolchest_Foundation.m in Sources */,
+				15FF8C6415DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15FF8C4115DDA85C00C9BEE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15FF8C5715DDA85C00C9BEE8 /* Toolchest_FoundationTests.m in Sources */,
+				15FF8C6515DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */,
+				15FF8C6815DDAAF100C9BEE8 /* TCArrayExtensionsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15FF8C4D15DDA85C00C9BEE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15FF8C3415DDA85C00C9BEE8 /* Toolchest-Foundation */;
+			targetProxy = 15FF8C4C15DDA85C00C9BEE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15FF8C5215DDA85C00C9BEE8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15FF8C5315DDA85C00C9BEE8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15FF8C5815DDA85C00C9BEE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		15FF8C5915DDA85C00C9BEE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15FF8C5B15DDA85C00C9BEE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Toolchest_Foundation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Toolchest-Foundation/Toolchest-Foundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		15FF8C5C15DDA85C00C9BEE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Toolchest_Foundation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Toolchest-Foundation/Toolchest-Foundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		15FF8C5E15DDA85C00C9BEE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Toolchest-Foundation/Toolchest-Foundation-Prefix.pch";
+				INFOPLIST_FILE = "Toolchest-FoundationTests/Toolchest-FoundationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		15FF8C5F15DDA85C00C9BEE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Toolchest-Foundation/Toolchest-Foundation-Prefix.pch";
+				INFOPLIST_FILE = "Toolchest-FoundationTests/Toolchest-FoundationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15FF8C2F15DDA85C00C9BEE8 /* Build configuration list for PBXProject "Toolchest-Foundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15FF8C5815DDA85C00C9BEE8 /* Debug */,
+				15FF8C5915DDA85C00C9BEE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15FF8C5A15DDA85C00C9BEE8 /* Build configuration list for PBXNativeTarget "Toolchest-Foundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15FF8C5B15DDA85C00C9BEE8 /* Debug */,
+				15FF8C5C15DDA85C00C9BEE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15FF8C5D15DDA85C00C9BEE8 /* Build configuration list for PBXNativeTarget "Toolchest-FoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15FF8C5E15DDA85C00C9BEE8 /* Debug */,
+				15FF8C5F15DDA85C00C9BEE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15FF8C2C15DDA85C00C9BEE8 /* Project object */;
+}

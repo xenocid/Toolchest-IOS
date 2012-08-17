@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Toolchest-Foundation' target in the 'Toolchest-Foundation' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
