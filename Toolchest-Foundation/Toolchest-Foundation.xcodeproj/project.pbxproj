@@ -20,6 +20,8 @@
 		15FF8C6F15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */; };
 		15FF8C7315DEC4D700C9BEE8 /* TCMathTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C7215DEC4D700C9BEE8 /* TCMathTools.m */; };
 		15FF8C7415DEC4D700C9BEE8 /* TCMathTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C7215DEC4D700C9BEE8 /* TCMathTools.m */; };
+		15FF8C7715DEEF3700C9BEE8 /* TCCommonPredicates.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C7615DEEF3700C9BEE8 /* TCCommonPredicates.m */; };
+		15FF8C7815DEEF3700C9BEE8 /* TCCommonPredicates.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF8C7615DEEF3700C9BEE8 /* TCCommonPredicates.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+TCExtensions.m"; sourceTree = "<group>"; };
 		15FF8C7115DEC4D700C9BEE8 /* TCMathTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMathTools.h; sourceTree = "<group>"; };
 		15FF8C7215DEC4D700C9BEE8 /* TCMathTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMathTools.m; sourceTree = "<group>"; };
+		15FF8C7515DEEF3600C9BEE8 /* TCCommonPredicates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCommonPredicates.h; sourceTree = "<group>"; };
+		15FF8C7615DEEF3700C9BEE8 /* TCCommonPredicates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCommonPredicates.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 				15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */,
 				15FF8C6C15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.h */,
 				15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */,
+				15FF8C7515DEEF3600C9BEE8 /* TCCommonPredicates.h */,
+				15FF8C7615DEEF3700C9BEE8 /* TCCommonPredicates.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				15FF8C6415DDA8AC00C9BEE8 /* NSArray+TCExtensions.m in Sources */,
 				15FF8C6E15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */,
 				15FF8C7315DEC4D700C9BEE8 /* TCMathTools.m in Sources */,
+				15FF8C7715DEEF3700C9BEE8 /* TCCommonPredicates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +283,7 @@
 				15FF8C6815DDAAF100C9BEE8 /* TCArrayExtensionsTests.m in Sources */,
 				15FF8C6F15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */,
 				15FF8C7415DEC4D700C9BEE8 /* TCMathTools.m in Sources */,
+				15FF8C7815DEEF3700C9BEE8 /* TCCommonPredicates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

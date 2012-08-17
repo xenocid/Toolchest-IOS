@@ -190,4 +190,12 @@
     }
 }
 
+-(void) testTotalPredicates
+{
+    NSArray* digits = [NSArray arrayWithNumberSequence:10];
+    NSNumber* sum = [digits reduce:[NSNumber numberWithInteger:0] withBlock: integerTotal];
+    
+    STAssertEquals([sum integerValue], 45, @"");
+}
+
 @end

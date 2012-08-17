@@ -45,14 +45,14 @@
     return result;
 }
 
--(void) each:(void (^)(id obj))block
+-(void) each:(each_block_predicate)block
 {
     for (id obj in self) {
         block(obj);
     }
 }
 
--(NSArray*) select:(BOOL (^)(id obj))block
+-(NSArray*) select:(select_block_predicate)block
 {
     NSMutableArray* results = [NSMutableArray array];
     for (id obj in self) {
@@ -63,7 +63,7 @@
     return results;
 }
 
--(NSArray*) map:(id (^)(id obj))block
+-(NSArray*) map:(map_block_predicate)block
 {
     NSMutableArray* results = [NSMutableArray array];
     for (id obj in self) {
@@ -72,7 +72,7 @@
     return results;
 }
 
--(id) reduce:(id) initial withBlock:(id (^)(id accumulator, id obj))block
+-(id) reduce:(id) initial withBlock:(reduce_block_predicate)block
 {
     id result = initial;
     for (id obj in self) {
