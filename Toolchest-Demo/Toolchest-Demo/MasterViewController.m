@@ -25,11 +25,20 @@
 @end
 
 @interface MasterViewController () {
-    NSMutableArray*   _demos;
+    NSMutableArray*   _tableViewItems;
 }
 @end
 
 @implementation MasterViewController
+
+- (id) init
+{
+    if(self = [super init]) {
+        _tableViewItems = [NSMutableArray array];
+    }
+    
+    return self;
+}
 
 - (void)awakeFromNib
 {
@@ -40,11 +49,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
-    _demos = [NSMutableArray array];
     
-    [self insertNewDemo:@"UIView Demos" withController: [[UIViewCategoriesDemoViewController alloc] init]];
+    
+    //[self insertNewDemo:@"UIView Demos" withController: [[UIViewCategoriesDemoViewController alloc] init]];
 }
 
 - (void)viewDidUnload
@@ -63,8 +72,8 @@
     DemoTableEntry* entry = [[DemoTableEntry alloc] init];
     entry.title = title;
     entry.viewController = viewController;
-    [_demos insertObject:entry atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [_tableViewItems insertObject:entry atIndex:_tableViewItems.count];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_tableViewItems.count inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
@@ -77,21 +86,27 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _demos.count;
+    return _tableViewItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    static NSString* REUSABLE_CELL_IDENTIFIER = @"DemoCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: REUSABLE_CELL_IDENTIFIER];
+    
+    if(nil == cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:REUSABLE_CELL_IDENTIFIER];
+    }
 
-    DemoTableEntry* object = [_demos objectAtIndex:indexPath.row];
+    DemoTableEntry* object = [_tableViewItems objectAtIndex:indexPath.row];
     cell.textLabel.text = object.title;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DemoTableEntry* entry = [_demos objectAtIndex:indexPath.row];
+    DemoTableEntry* entry = [_tableViewItems objectAtIndex:indexPath.row];
     [[self navigationController] pushViewController:entry.viewController animated:TRUE];
 }
 

@@ -14,21 +14,14 @@
 
 @implementation UIViewCategoriesDemoViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
-        label.text = @"Hello";
-        [self.view addSubview:label];
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
+    label.text = @"Hello";
+    [self.view addSubview:label];
 }
 
 - (void)viewDidUnload

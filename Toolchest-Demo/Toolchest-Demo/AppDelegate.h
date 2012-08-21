@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class MasterViewController;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, NSXMLParserDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) IBOutlet UINavigationController* navigationController;
+@property (nonatomic, strong) IBOutlet MasterViewController* rootViewController;
 
 @end

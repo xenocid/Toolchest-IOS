@@ -1,5 +1,8 @@
 <demos>
-    <section title="">
-        <demo title="" controller=""/>
+    <section title="UI Views Demo">
+        <demo title="UI Views" controller="UIViewCategoriesDemoViewController"/>
+    </section>
+    <section title="Test 2">
+        <demo title="Test 3" controller=""/>
     </section>
 </demos>

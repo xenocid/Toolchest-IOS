@@ -10,4 +10,6 @@
 
 @interface MasterViewController : UITableViewController
 
+- (void)insertNewDemo:(NSString*) title withController: (UIViewController*) viewController;
+
 @end
