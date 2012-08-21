@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
 
     UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
     label.text = @"Hello";

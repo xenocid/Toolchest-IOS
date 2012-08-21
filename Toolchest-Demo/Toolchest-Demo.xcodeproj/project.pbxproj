@@ -13,7 +13,6 @@
 		15BF16B415DEF6B8006506A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15BF16B215DEF6B8006506A1 /* InfoPlist.strings */; };
 		15BF16B615DEF6B8006506A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BF16B515DEF6B8006506A1 /* main.m */; };
 		15BF16BA15DEF6B8006506A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BF16B915DEF6B8006506A1 /* AppDelegate.m */; };
-		15BF16BD15DEF6B8006506A1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BF16BB15DEF6B8006506A1 /* MainStoryboard.storyboard */; };
 		15BF16C015DEF6B8006506A1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BF16BF15DEF6B8006506A1 /* MasterViewController.m */; };
 		15BF16C315DEF6B8006506A1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BF16C215DEF6B8006506A1 /* DetailViewController.m */; };
 		15BF16CB15DEF6B9006506A1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BF16CA15DEF6B9006506A1 /* SenTestingKit.framework */; };
@@ -48,7 +47,6 @@
 		15BF16B715DEF6B8006506A1 /* Toolchest-Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toolchest-Demo-Prefix.pch"; sourceTree = "<group>"; };
 		15BF16B815DEF6B8006506A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15BF16B915DEF6B8006506A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15BF16BC15DEF6B8006506A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		15BF16BE15DEF6B8006506A1 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		15BF16BF15DEF6B8006506A1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		15BF16C115DEF6B8006506A1 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -88,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1566675A15E42E2900630104 /* Demo ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				15BF16E115DEF766006506A1 /* UIViewCategoriesDemoViewController.h */,
+				15BF16E215DEF766006506A1 /* UIViewCategoriesDemoViewController.m */,
+			);
+			name = "Demo ViewControllers";
+			sourceTree = "<group>";
+		};
 		15BF169A15DEF6B8006506A1 = {
 			isa = PBXGroup;
 			children = (
@@ -121,17 +128,15 @@
 		15BF16AF15DEF6B8006506A1 /* Toolchest-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				1566675A15E42E2900630104 /* Demo ViewControllers */,
 				15BF16B815DEF6B8006506A1 /* AppDelegate.h */,
 				15BF16B915DEF6B8006506A1 /* AppDelegate.m */,
-				15BF16BB15DEF6B8006506A1 /* MainStoryboard.storyboard */,
 				15BF16BE15DEF6B8006506A1 /* MasterViewController.h */,
 				15BF16BF15DEF6B8006506A1 /* MasterViewController.m */,
 				15BF16C115DEF6B8006506A1 /* DetailViewController.h */,
 				15BF16C215DEF6B8006506A1 /* DetailViewController.m */,
-				15BF16E115DEF766006506A1 /* UIViewCategoriesDemoViewController.h */,
-				15BF16E215DEF766006506A1 /* UIViewCategoriesDemoViewController.m */,
-				15BF16B015DEF6B8006506A1 /* Supporting Files */,
 				15BF16E515E2F2B0006506A1 /* demos.xml */,
+				15BF16B015DEF6B8006506A1 /* Supporting Files */,
 			);
 			path = "Toolchest-Demo";
 			sourceTree = "<group>";
@@ -238,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				15BF16B415DEF6B8006506A1 /* InfoPlist.strings in Resources */,
-				15BF16BD15DEF6B8006506A1 /* MainStoryboard.storyboard in Resources */,
 				15BF16E615E2F2B0006506A1 /* demos.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,14 +313,6 @@
 				15BF16B315DEF6B8006506A1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		15BF16BB15DEF6B8006506A1 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15BF16BC15DEF6B8006506A1 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		15BF16D315DEF6B9006506A1 /* InfoPlist.strings */ = {
@@ -454,6 +450,7 @@
 				15BF16DD15DEF6B9006506A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15BF16DE15DEF6B9006506A1 /* Build configuration list for PBXNativeTarget "Toolchest-DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +459,7 @@
 				15BF16E015DEF6B9006506A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -40,26 +40,14 @@
     return self;
 }
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-    
-    
-    //[self insertNewDemo:@"UIView Demos" withController: [[UIViewCategoriesDemoViewController alloc] init]];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -72,7 +60,9 @@
     DemoTableEntry* entry = [[DemoTableEntry alloc] init];
     entry.title = title;
     entry.viewController = viewController;
+
     [_tableViewItems insertObject:entry atIndex:_tableViewItems.count];
+    
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_tableViewItems.count inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
