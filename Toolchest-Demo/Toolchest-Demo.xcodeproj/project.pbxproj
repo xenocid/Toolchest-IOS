@@ -23,6 +23,8 @@
 		15BF16D815DEF6B9006506A1 /* Toolchest_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BF16D715DEF6B9006506A1 /* Toolchest_DemoTests.m */; };
 		15BF16E315DEF766006506A1 /* UIViewCategoriesDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BF16E215DEF766006506A1 /* UIViewCategoriesDemoViewController.m */; };
 		15BF16E415DEF766006506A1 /* UIViewCategoriesDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BF16E215DEF766006506A1 /* UIViewCategoriesDemoViewController.m */; };
+		15BF16E615E2F2B0006506A1 /* demos.xml in Resources */ = {isa = PBXBuildFile; fileRef = 15BF16E515E2F2B0006506A1 /* demos.xml */; };
+		15BF16E715E2F2B0006506A1 /* demos.xml in Resources */ = {isa = PBXBuildFile; fileRef = 15BF16E515E2F2B0006506A1 /* demos.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		15BF16D715DEF6B9006506A1 /* Toolchest_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Toolchest_DemoTests.m; sourceTree = "<group>"; };
 		15BF16E115DEF766006506A1 /* UIViewCategoriesDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewCategoriesDemoViewController.h; sourceTree = "<group>"; };
 		15BF16E215DEF766006506A1 /* UIViewCategoriesDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewCategoriesDemoViewController.m; sourceTree = "<group>"; };
+		15BF16E515E2F2B0006506A1 /* demos.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = demos.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +128,10 @@
 				15BF16BF15DEF6B8006506A1 /* MasterViewController.m */,
 				15BF16C115DEF6B8006506A1 /* DetailViewController.h */,
 				15BF16C215DEF6B8006506A1 /* DetailViewController.m */,
-				15BF16B015DEF6B8006506A1 /* Supporting Files */,
 				15BF16E115DEF766006506A1 /* UIViewCategoriesDemoViewController.h */,
 				15BF16E215DEF766006506A1 /* UIViewCategoriesDemoViewController.m */,
+				15BF16B015DEF6B8006506A1 /* Supporting Files */,
+				15BF16E515E2F2B0006506A1 /* demos.xml */,
 			);
 			path = "Toolchest-Demo";
 			sourceTree = "<group>";
@@ -235,6 +239,7 @@
 			files = (
 				15BF16B415DEF6B8006506A1 /* InfoPlist.strings in Resources */,
 				15BF16BD15DEF6B8006506A1 /* MainStoryboard.storyboard in Resources */,
+				15BF16E615E2F2B0006506A1 /* demos.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15BF16D515DEF6B9006506A1 /* InfoPlist.strings in Resources */,
+				15BF16E715E2F2B0006506A1 /* demos.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

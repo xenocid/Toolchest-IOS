@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "DetailViewController.h"
-
-@interface UIViewCategoriesDemoViewController : DetailViewController
+@interface UIViewCategoriesDemoViewController : UITableViewController {
+    NSMutableArray*   _demos;
+}
 
 @end
