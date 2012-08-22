@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Toolchest-Demo/Toolchest-Demo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Toolchest-Foundation/Toolchest-Foundation.xcodeproj">
+   </FileRef>
+</Workspace>
