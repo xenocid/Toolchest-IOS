@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1503012E15E55D0000051876 /* NSObject+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503012D15E55D0000051876 /* NSObject+TCExtensions.m */; };
+		1503012F15E55D0000051876 /* NSObject+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503012D15E55D0000051876 /* NSObject+TCExtensions.m */; };
+		1503013415E565E100051876 /* TCCombinatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503013315E565E100051876 /* TCCombinatorTests.m */; };
+		1566676015E4306E00630104 /* TCTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 1566675F15E4306E00630104 /* TCTuple.m */; };
+		1566676115E4306E00630104 /* TCTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 1566675F15E4306E00630104 /* TCTuple.m */; };
+		1566676415E431AB00630104 /* TCTupleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1566676315E431AB00630104 /* TCTupleTests.m */; };
+		1566676815E453C200630104 /* UIView+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1566676715E453C200630104 /* UIView+TCExtensions.m */; };
+		1566676915E453C200630104 /* UIView+TCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1566676715E453C200630104 /* UIView+TCExtensions.m */; };
 		15FF8C3915DDA85C00C9BEE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF8C3815DDA85C00C9BEE8 /* Foundation.framework */; };
 		15FF8C4815DDA85C00C9BEE8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF8C4715DDA85C00C9BEE8 /* SenTestingKit.framework */; };
 		15FF8C4A15DDA85C00C9BEE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FF8C4915DDA85C00C9BEE8 /* UIKit.framework */; };
@@ -47,6 +55,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1503012C15E55D0000051876 /* NSObject+TCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TCExtensions.h"; sourceTree = "<group>"; };
+		1503012D15E55D0000051876 /* NSObject+TCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TCExtensions.m"; sourceTree = "<group>"; };
+		1503013115E5617600051876 /* TCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMacros.h; sourceTree = "<group>"; };
+		1503013215E565E100051876 /* TCCombinatorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCombinatorTests.h; sourceTree = "<group>"; };
+		1503013315E565E100051876 /* TCCombinatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCombinatorTests.m; sourceTree = "<group>"; };
+		1566675E15E4306E00630104 /* TCTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTuple.h; sourceTree = "<group>"; };
+		1566675F15E4306E00630104 /* TCTuple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTuple.m; sourceTree = "<group>"; };
+		1566676215E431AB00630104 /* TCTupleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTupleTests.h; sourceTree = "<group>"; };
+		1566676315E431AB00630104 /* TCTupleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTupleTests.m; sourceTree = "<group>"; };
+		1566676615E453C200630104 /* UIView+TCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TCExtensions.h"; sourceTree = "<group>"; };
+		1566676715E453C200630104 /* UIView+TCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TCExtensions.m"; sourceTree = "<group>"; };
 		15FF8C3515DDA85C00C9BEE8 /* libToolchest-Foundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libToolchest-Foundation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FF8C3815DDA85C00C9BEE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		15FF8C3C15DDA85C00C9BEE8 /* Toolchest-Foundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toolchest-Foundation-Prefix.pch"; sourceTree = "<group>"; };
@@ -90,6 +109,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1566675C15E4303B00630104 /* Core Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				15FF8C6215DDA8AC00C9BEE8 /* NSArray+TCExtensions.h */,
+				15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */,
+				15FF8C6C15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.h */,
+				15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */,
+				15FF8C7515DEEF3600C9BEE8 /* TCCommonPredicates.h */,
+				15FF8C7615DEEF3700C9BEE8 /* TCCommonPredicates.m */,
+				1566675E15E4306E00630104 /* TCTuple.h */,
+				1566675F15E4306E00630104 /* TCTuple.m */,
+				1503012C15E55D0000051876 /* NSObject+TCExtensions.h */,
+				1503012D15E55D0000051876 /* NSObject+TCExtensions.m */,
+			);
+			name = "Core Foundation";
+			sourceTree = "<group>";
+		};
+		1566676515E453A100630104 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1566676615E453C200630104 /* UIView+TCExtensions.h */,
+				1566676715E453C200630104 /* UIView+TCExtensions.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
 		15FF8C2A15DDA85C00C9BEE8 = {
 			isa = PBXGroup;
 			children = (
@@ -122,10 +167,12 @@
 		15FF8C3A15DDA85C00C9BEE8 /* Toolchest-Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				15FF8C6015DDA87B00C9BEE8 /* Categories */,
+				1566676515E453A100630104 /* UIKit */,
+				1566675C15E4303B00630104 /* Core Foundation */,
 				15FF8C3B15DDA85C00C9BEE8 /* Supporting Files */,
 				15FF8C7115DEC4D700C9BEE8 /* TCMathTools.h */,
 				15FF8C7215DEC4D700C9BEE8 /* TCMathTools.m */,
+				1503013115E5617600051876 /* TCMacros.h */,
 			);
 			path = "Toolchest-Foundation";
 			sourceTree = "<group>";
@@ -144,6 +191,10 @@
 				15FF8C5015DDA85C00C9BEE8 /* Supporting Files */,
 				15FF8C6615DDAAF100C9BEE8 /* TCArrayExtensionsTests.h */,
 				15FF8C6715DDAAF100C9BEE8 /* TCArrayExtensionsTests.m */,
+				1566676215E431AB00630104 /* TCTupleTests.h */,
+				1566676315E431AB00630104 /* TCTupleTests.m */,
+				1503013215E565E100051876 /* TCCombinatorTests.h */,
+				1503013315E565E100051876 /* TCCombinatorTests.m */,
 			);
 			path = "Toolchest-FoundationTests";
 			sourceTree = "<group>";
@@ -155,19 +206,6 @@
 				15FF8C5215DDA85C00C9BEE8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		15FF8C6015DDA87B00C9BEE8 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				15FF8C6215DDA8AC00C9BEE8 /* NSArray+TCExtensions.h */,
-				15FF8C6315DDA8AC00C9BEE8 /* NSArray+TCExtensions.m */,
-				15FF8C6C15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.h */,
-				15FF8C6D15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m */,
-				15FF8C7515DEEF3600C9BEE8 /* TCCommonPredicates.h */,
-				15FF8C7615DEEF3700C9BEE8 /* TCCommonPredicates.m */,
-			);
-			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +310,9 @@
 				15FF8C6E15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */,
 				15FF8C7315DEC4D700C9BEE8 /* TCMathTools.m in Sources */,
 				15FF8C7715DEEF3700C9BEE8 /* TCCommonPredicates.m in Sources */,
+				1566676015E4306E00630104 /* TCTuple.m in Sources */,
+				1566676815E453C200630104 /* UIView+TCExtensions.m in Sources */,
+				1503012E15E55D0000051876 /* NSObject+TCExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +325,11 @@
 				15FF8C6F15DEC2E300C9BEE8 /* NSMutableArray+TCExtensions.m in Sources */,
 				15FF8C7415DEC4D700C9BEE8 /* TCMathTools.m in Sources */,
 				15FF8C7815DEEF3700C9BEE8 /* TCCommonPredicates.m in Sources */,
+				1566676115E4306E00630104 /* TCTuple.m in Sources */,
+				1566676415E431AB00630104 /* TCTupleTests.m in Sources */,
+				1566676915E453C200630104 /* UIView+TCExtensions.m in Sources */,
+				1503012F15E55D0000051876 /* NSObject+TCExtensions.m in Sources */,
+				1503013415E565E100051876 /* TCCombinatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

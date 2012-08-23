@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^each_block_predicate)(id obj);
+typedef void (^each_with_index_block_predicate)(id obj, NSUInteger index);
 typedef BOOL (^select_block_predicate)(id obj);
 typedef id   (^map_block_predicate)(id obj);
 typedef id   (^reduce_block_predicate)(id accumulator, id obj);

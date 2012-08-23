@@ -10,4 +10,10 @@
 
 @interface TCTuple : NSObject
 
+@property (nonatomic, strong) id    first;
+@property (nonatomic, strong) id    second;
+
+- (id) initWith: (id) theFirst and: (id) theSecond;
++ (id) tupleWith: (id) theFirst and: (id) theSecond;
+
 @end

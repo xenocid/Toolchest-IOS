@@ -8,6 +8,7 @@
 
 #import "TCArrayExtensionsTests.h"
 
+#import "TCMacros.h"
 #import "NSArray+TCExtensions.h"
 #import "NSMutableArray+TCExtensions.h"
 
@@ -15,8 +16,8 @@
 
 -(void) testArrayOfSortedString
 {
-    NSArray* array = [[NSArray arrayWithObjects: @"charlie", @"zulu", @"alpha", [NSNumber numberWithInteger:2], @"bravo", nil] arrayOfSortedStrings];
-    NSArray* controlArray = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"zulu", nil];
+    NSArray* array = [ NSARRAY( @"charlie", @"zulu", @"alpha", NSINT(2), @"bravo") arrayOfSortedStrings];
+    NSArray* controlArray = NSARRAY( @"alpha", @"bravo", @"charlie", @"zulu");
     
     [controlArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         STAssertTrue( [((NSString*)obj) isEqualToString: (NSString*)[array objectAtIndex:idx]], @"Strings do not match");
@@ -25,7 +26,7 @@
 
 -(void) testStringValue
 {
-    NSString* stringValue = [[NSArray arrayWithObjects: @"charlie", @"zulu", @"alpha", nil] stringValue];
+    NSString* stringValue = [ NSARRAY( @"charlie", @"zulu", @"alpha") stringValue];
     STAssertTrue([stringValue isEqualToString:@"charlie zulu alpha"], @"Strings do not match");
 }
 
@@ -89,12 +90,32 @@
     STAssertEquals([result integerValue], [controlResult integerValue], @"Arrays do not match");
 }
 
+-(void) testZip
+{
+    NSArray* digits = [NSArray arrayWithNumberSequence:3];
+    NSArray* letters = NSARRAY( @"a", @"b", @"c", @"d");
+    
+    NSArray* zipped = [letters zip: digits];
+    
+    STAssertTrue([[zipped objectAtIndex:2] objectAtIndex:0] == @"c", @"[NSArray zip] failed");
+    STAssertTrue([[zipped objectAtIndex:3] objectAtIndex:1] == [NSNull null], @"[NSArray zip] failed");
+}
+
+-(void) testSlice
+{
+    NSArray* digits = [NSArray arrayWithNumberSequence:10];
+    
+    NSArray* middle4 = [digits slice:4 to:7];
+    
+    STAssertTrue(middle4.count == 4, @"[NSArray slice] failed");
+    STAssertTrue([[NSArray arrayWithNumberSequence:4 startingAt:4] isEqualToArray:middle4], @"[NSArray slice] failed");
+}
+
 -(void) testMoveObjectAtIndex
 {
     NSMutableArray* digits = [[NSArray arrayWithNumberSequence:3] mutableCopy];
-    NSArray* controlDigits = [NSArray arrayWithObjects: [NSNumber numberWithInteger:0],
-                                                        [NSNumber numberWithInteger:2],
-                                                        [NSNumber numberWithInteger:1],nil];
+    NSArray* controlDigits = NSARRAY(NSINT(0), NSINT(2), NSINT(1));
+    
     [digits moveObjectAtIndex:2 toIndex:1];
     
     for(int i = 0; i < 3; i++) {
@@ -104,8 +125,8 @@
 
 -(void) testUnique
 {
-    NSArray* initial = [NSArray arrayWithObjects: @"alpha", @"alpha", @"bravo", @"bravo", @"bravo", @"charlie", nil];
-    NSArray* control = [NSArray arrayWithObjects: @"alpha", @"bravo", @"charlie", nil];
+    NSArray* initial = NSARRAY( @"alpha", @"alpha", @"bravo", @"bravo", @"bravo", @"charlie");
+    NSArray* control = NSARRAY( @"alpha", @"bravo", @"charlie");
     
     NSArray* uniques = [initial unique];
     
@@ -114,9 +135,9 @@
 
 -(void) testUnion
 {
-    NSArray* array1 = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"delta", nil ];
-    NSArray* array2 = [NSArray arrayWithObjects:@"alpha", @"echo", @"foxtrot", nil ];
-    NSArray* control = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"delta", @"echo", @"foxtrot", nil ];
+    NSArray* array1 = NSARRAY( @"alpha", @"bravo", @"charlie", @"delta");
+    NSArray* array2 = NSARRAY( @"alpha", @"echo", @"foxtrot");
+    NSArray* control = NSARRAY( @"alpha", @"bravo", @"charlie", @"delta", @"echo", @"foxtrot");
     
     NSArray* unionArray = [array1 unionWithArray: array2];
     
@@ -129,9 +150,9 @@
 
 -(void) testIntersection
 {
-    NSArray* array1 = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"delta", nil ];
-    NSArray* array2 = [NSArray arrayWithObjects:@"alpha", @"echo", @"foxtrot", nil ];
-    NSArray* control = [NSArray arrayWithObjects:@"alpha", nil ];
+    NSArray* array1 = NSARRAY( @"alpha", @"bravo", @"charlie", @"delta");
+    NSArray* array2 = NSARRAY( @"alpha", @"echo", @"foxtrot");
+    NSArray* control = NSARRAY( @"alpha");
     
     NSArray* intersectionArray = [array1 intersectionWithArray: array2];
     
@@ -144,9 +165,9 @@
 
 -(void) testComplementation
 {
-    NSArray* array1 = [NSArray arrayWithObjects:@"alpha", @"bravo", @"charlie", @"delta", nil ];
-    NSArray* array2 = [NSArray arrayWithObjects:@"alpha", @"echo", @"foxtrot", nil ];
-    NSArray* control = [NSArray arrayWithObjects:@"bravo", @"charlie", @"delta", nil ];
+    NSArray* array1 = NSARRAY( @"alpha", @"bravo", @"charlie", @"delta");
+    NSArray* array2 = NSARRAY( @"alpha", @"echo", @"foxtrot");
+    NSArray* control = NSARRAY( @"bravo", @"charlie", @"delta");
     
     NSArray* complementationArray = [array1 complementWithArray: array2];
     
@@ -196,6 +217,24 @@
     NSNumber* sum = [digits reduce:[NSNumber numberWithInteger:0] withBlock: integerTotal];
     
     STAssertEquals([sum integerValue], 45, @"");
+}
+
+-(void) testFirstObject
+{
+    NSArray* digits = [NSArray arrayWithNumberSequence:10 startingAt:7];
+    STAssertTrue([[digits firstObject] isEqualToNumber: [NSNumber numberWithInteger:7]], @"[NSArray firstObject] failed");
+}
+
+-(void) testCycle
+{
+    NSArray* letters = NSARRAY( @"a", @"b", @"c");
+    NSMutableString* result = [@"" mutableCopy];
+    
+    [letters cycle:3 with:^(id obj) {
+        [result appendString: (NSString*)obj];
+    }];
+    
+    STAssertTrue([@"abcabcabc" isEqualToString:result], @"[NSArray cycle] failed");
 }
 
 @end

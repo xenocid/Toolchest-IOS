@@ -52,6 +52,13 @@
     }
 }
 
+-(void) eachWithIndex:(each_with_index_block_predicate)block
+{
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        block(obj, idx);
+    }];
+}
+
 -(NSArray*) select:(select_block_predicate)block
 {
     NSMutableArray* results = [NSMutableArray array];
@@ -79,6 +86,42 @@
         result = block(result, obj);
     }
     return result;
+}
+
+-(NSArray*) zip: (NSArray*) otherArray
+{
+    NSMutableArray* zippedArray = [NSMutableArray array];
+    
+    [self eachWithIndex:^(id obj, NSUInteger index) {
+        id otherObj = [NSNull null];
+        if (index < otherArray.count) {
+            otherObj = [otherArray objectAtIndex:index];
+        }
+        NSArray* tuple = [NSArray arrayWithObjects:obj, otherObj, nil];
+        [zippedArray addObject:tuple];
+    }];
+    
+    return zippedArray;
+}
+
+-(NSArray*) slice: (NSUInteger) from to: (NSUInteger) to
+{
+    NSMutableArray* slice = [NSMutableArray array];
+    
+    [self eachWithIndex:^(id obj, NSUInteger index) {
+        if((index >= from) && (index <= to)) {
+            [slice addObject:obj];
+        }
+    }];
+    
+    return slice;
+}
+
+-(void) cycle: (NSUInteger) times with: (each_block_predicate) block
+{
+    for(int i = 0; i < times; i++) {
+        [self each:block];
+    }
 }
 
 -(NSArray*) unique
@@ -166,5 +209,13 @@
 	return [self componentsJoinedByString:@" "];
 }
 
+-(id) firstObject
+{
+    if(0 == self.count) {
+        return nil;
+    } else {
+        return [self objectAtIndex:0];
+    }
+}
 
 @end
